@@ -48,7 +48,7 @@ def view_history(email):
 
 # Create a function to get user input
 def get_user_input():
-    userInput = st.text_input("Enter your question")
+    userInput = st.text_area("Enter your question")
     return userInput
 
 # Create a function to create a prompt
