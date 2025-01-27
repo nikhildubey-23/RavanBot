@@ -73,6 +73,15 @@ def copy_to_clipboard(text):
     pyperclip.copy(text)
     st.write("Copied to Clipboard!")
 
+# Create a function to clear history
+def clear_history(email):
+    conn = sqlite3.connect(f'{email}.db')
+    c = conn.cursor()
+    c.execute("DELETE FROM user_history")
+    conn.commit()
+    conn.close()
+    st.write("History cleared successfully!")
+
 # Create a main function
 def main():
     st.title("Ravan Offensive Security AI Assistant")
@@ -100,6 +109,8 @@ def main():
             st.write("Please generate the output first.")
     if st.button("View History"):
         view_history(email)
+    if st.button("Clear History"):
+        clear_history(email)
 
 if __name__ == "__main__":
     main()
