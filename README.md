@@ -42,10 +42,6 @@ This project provides a web-based interface for users to interact with a cyberse
 
 Contributions are welcome! Please submit a pull request with your changes.
 
-## License
-
-This project is licensed under the MIT License.
-
 ## Acknowledgments
 
 * LangChain: https://langchain.com/
