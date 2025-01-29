@@ -84,7 +84,7 @@ def clear_history(email):
 
 # Create a main function
 def main():
-    st.title("Ravan Offensive Security AI Assistant")
+    st.title("Ravan Offensive Security AI Assistant Tuned By DeepSeek")
     email = "default_user"
     if not os.path.exists(f'{email}.db'):
         create_database(email)
@@ -93,7 +93,7 @@ def main():
         llm = ChatGroq(
             temperature=0, 
             groq_api_key=GROQ_API_KEY, 
-            model_name="llama-3.1-8b-instant"
+            model_name="deepseek-r1-distill-llama-70b"
         )
         prompt_extract = create_prompt()
         chain_extract = prompt_extract | llm 
